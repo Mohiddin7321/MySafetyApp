@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Safety Map App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Safety Map</h1>
+    <div id="map"></div>
+    <textarea id="tipText" placeholder="Share a safety tip..."></textarea>
+    <div id="tipsSection">
+      <h3>Community Safety Tips</h3>
+      <ul id="tipsList"></ul>
+    </div>
+    <button class="btn submit-btn" onclick="submitTip()">Submit Tip</button>
+    <button class="btn panic-btn" onclick="panic()">Panic Button</button>
+  </div>
+
+  <!-- Firebase & Google Maps -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="script.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAo4bWiZrlKOnWvfFWK5IpUNesa_1hAa1I&callback=initMap">
+  </script>
+  
+</body>
+</html>
