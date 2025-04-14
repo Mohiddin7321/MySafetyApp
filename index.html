@@ -3,19 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>Safety Map App</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="aseed.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Safety Map</h1>
-    <div id="map"></div>
-    <textarea id="tipText" placeholder="Share a safety tip..."></textarea>
-    <div id="tipsSection">
-      <h3>Community Safety Tips</h3>
-      <ul id="tipsList"></ul>
+  <div class="animated-bg"></div>
+  <div class="content">
+    <h1>Community Safety Map</h1> 
+    <h3>"Share and view safety information in your community. Together we can create a safer neighborhood."</h3>
+    
+    <div class="container">
+      <div class="row">
+        <!-- Left Column (Map and Panic Button) -->
+        <div class="column left-column">
+          
+          <div id="map"></div>
+          <button class="btn panic-btn" onclick="panic()">Panic Button</button>
+        </div>
+        
+        <!-- Right Column (Tips Section) -->
+        <div class="column right-column">
+          <div class="tip-submission">
+            <h3>Share a Safety Tip</h3>
+            <textarea id="tipText" placeholder="Type your safety tip here..."></textarea>
+            <button class="btn submit-btn" onclick="submitTip()">Submit Tip</button>
+          </div>
+          <div class="tips-container">
+            <h3>Community Safety Tips</h3>
+            <ul id="tipsList"></ul>
+          </div>
+        </div>
+      </div>
     </div>
-    <button class="btn submit-btn" onclick="submitTip()">Submit Tip</button>
-    <button class="btn panic-btn" onclick="panic()">Panic Button</button>
   </div>
 
   <!-- Firebase & Google Maps -->
@@ -25,6 +43,5 @@
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAo4bWiZrlKOnWvfFWK5IpUNesa_1hAa1I&callback=initMap">
   </script>
-  
 </body>
 </html>
